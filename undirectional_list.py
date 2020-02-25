@@ -2,7 +2,7 @@ from linked_list import List
 from copy import copy
 
 
-class Node:
+class UNode:
     def __init__(self, value, next=None):
         self.value = value
         self.next = next
@@ -11,7 +11,7 @@ class Node:
 class UndirectionalList(List):
 
     def __init__(self):
-            self.head = None
+        self.head = None
 
     def insert_to_begin(self, node):
         if self.head:
@@ -70,7 +70,6 @@ class UndirectionalList(List):
         node.next = current.next
         current = None
 
-
     def sub_from_end(self, node):
         current = self.head
         while current.next.next:
@@ -86,7 +85,6 @@ class UndirectionalList(List):
             sum += current.value
             current = current.next
         return sum
-
 
     def find(self, value):
         index = 0
